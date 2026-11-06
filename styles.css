@@ -123,18 +123,32 @@ body:not(.home) .mast {
 .hero-portrait {
   width: min(100%, 460px);
   justify-self: center;
-  background: white;
   display: block;
 }
 .hero-copy { max-width: 40rem; }
 .hero h1 {
   margin: 0;
   color: white;
-  font-family: "Source Sans 3", "Segoe UI", sans-serif;
-  font-weight: 700;
-  font-size: clamp(3.1rem, 5.6vw, 5.5rem);
-  line-height: 0.94;
-  letter-spacing: -0.035em;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  font-size: clamp(3.2rem, 5.8vw, 5.7rem);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+.pair-title {
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  font-size: clamp(3.6rem, 8vw, 6.4rem);
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  margin: 0.2rem 0 0.15rem;
+}
+.pair-line {
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  font-size: clamp(1.6rem, 3vw, 2.35rem);
+  line-height: 1.15;
+  margin: 0 0 1.4rem;
 }
 .hero-sub {
   margin: 1.15rem 0 0;
