@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,57 +7,164 @@
   <meta name="description" content="Mark Heeney is a Mortgage Agent Level 2 with Mortgage Powered Financial Group in Windsor. He helps Ontario clients buy, refinance, and understand the mortgage in front of them.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="home">
-  <a class="skip" href="#hero">Skip to content</a>
-  <div class="hero-screen">
-    <header class="mast">
-      <nav class="mast-links" aria-label="Page">
-        <a href="#story">My Story</a>
-        <a href="#services">Services</a>
-        <a href="ag-commercial.html">Ag & Commercial</a>
-        <a href="blog/index.html">Blog</a>
-        <a href="https://book.mortgagesuite.ca/#/markheeney">Book now</a>
-      </nav>
-      <a class="wordmark" href="#hero" aria-label="Mark Heeney">
-        <span class="wordmark-name">Mark</span>
-        <span class="wordmark-surname">Heeney</span>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div class="compliance-bar">
+    <div class="wrap compliance-inner">
+      <p>Mark Heeney, Mortgage Agent Level 2 (FSRA #M25001772) · Mortgage Powered Financial Group Inc. (FSRA #13720)</p>
+      <a href="https://www.fsrao.ca/consumers/mortgage-brokering" rel="noopener noreferrer" target="_blank">Verify licences on FSRA</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Mark Heeney home">
+        <span class="brand-name">Mark Heeney</span>
+        <span class="brand-meta">Mortgage Agent Level 2 · MPFG</span>
       </a>
-      <div class="mast-social">
-        <a href="https://www.instagram.com/mortgage.with.mark/" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg></a>
-        <a href="https://www.facebook.com/VII.XL.VII" aria-label="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M14.5 8.5V6.8c0-.8.5-1 1.1-1H17V3h-2.2C12.2 3 11 4.4 11 6.6v1.9H9v2.8h2V21h3.5v-9.7h2.3l.4-2.8h-2.7z"/></svg></a>
-        <a href="https://www.linkedin.com/in/mark-heeney-460601441/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M4.7 3.3a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6zM3.2 8.3h3v12.4h-3zM9.1 8.3h2.9v1.7h.1c.4-.8 1.4-1.7 3-1.7 3.2 0 3.8 2.1 3.8 4.8v7.6h-3V14c0-1.6 0-3.6-2.2-3.6s-2.5 1.7-2.5 3.5v6.8H9.1z"/></svg></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
+        <span class="sr-only">Menu</span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="primary-nav" id="primary-nav" data-primary-nav>
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="#story">My Story</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="ag-commercial.html">Ag &amp; Commercial</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn-gold header-cta" href="https://book.mortgagesuite.ca/#/markheeney" rel="noopener noreferrer" target="_blank">Book a Meeting</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="hero-media" aria-hidden="true">
+        <img src="mark-heeney.webp" alt="" width="1687" height="1670" fetchpriority="high">
       </div>
-    </header>
-    <section class="hero" id="hero">
-      <div class="hero-layout">
-        <img
-          class="hero-portrait"
-          src="mark-heeney.webp"
-          alt="Mark Heeney, mortgage agent"
-          width="1687"
-          height="1670"
-          fetchpriority="high"
-        >
-        <div class="hero-copy">
-          <h1>Your Life Your way,<br>Through financial freedom</h1>
-          <p class="hero-sub">Mortgage Agent Level 2 <span>/</span> Windsor</p>
+      <div class="hero-veil"></div>
+      <div class="wrap hero-copy">
+        <p class="eyebrow reveal">Mortgage Powered Financial Group</p>
+        <h1 class="reveal reveal-delay-1">
+          <span class="brand-line">Mark Heeney</span>
+          <span class="sub-line">Mortgage Agent Level 2 helping Windsor households buy, refinance, and plan with clarity</span>
+        </h1>
+        <p class="hero-lead reveal reveal-delay-2">Your life, your way — through financial freedom. Clear guidance for first-time buyers, next-home moves, and equity decisions across Ontario.</p>
+        <div class="cta-row reveal reveal-delay-3">
+          <a class="btn btn-gold" href="https://book.mortgagesuite.ca/#/markheeney" rel="noopener noreferrer" target="_blank">Book a Meeting</a>
+          <a class="btn btn-outline" href="https://apply.mortgageboss.ca/MI/mark-heeney" rel="noopener noreferrer" target="_blank">Apply Now</a>
+        </div>
+        <p class="hero-compliance reveal reveal-delay-3">Mark Heeney, Mortgage Agent Level 2 · FSRA #M25001772 · Mortgage Powered Financial Group Inc. · FSRA #13720</p>
+      </div>
+    </section>
+
+    <section class="section focus" id="services">
+      <div class="wrap">
+        <p class="eyebrow">Focus areas</p>
+        <h2 class="section-title">Financing built around what the mortgage needs to do</h2>
+        <p class="section-lead">A purchase, a refinance, or equity for a specific plan. The conversation starts with your goals — not a single bank product.</p>
+        <div class="pillar-list">
+          <a class="pillar reveal reveal-delay-1" href="https://book.mortgagesuite.ca/#/markheeney">
+            <div class="pillar-image">
+              <img src="images/mark-story.png" alt="Mark Heeney outdoors with a client" width="1024" height="1024" loading="lazy">
+            </div>
+            <div class="pillar-copy">
+              <h3>Home purchases</h3>
+              <p>First homes and next properties — with a clear read on payments, qualification, and what lenders will need.</p>
+              <span class="pillar-link">Talk it through</span>
+            </div>
+          </a>
+          <a class="pillar reveal reveal-delay-2" href="https://book.mortgagesuite.ca/#/markheeney">
+            <div class="pillar-image">
+              <img src="images/mark-lifting.png" alt="Mark Heeney lifting weights" width="1200" height="1200" loading="lazy">
+            </div>
+            <div class="pillar-copy">
+              <h3>Refinance &amp; equity</h3>
+              <p>Consolidate debt, renovate, or put equity toward a plan — without losing sight of the bigger monthly picture.</p>
+              <span class="pillar-link">Talk it through</span>
+            </div>
+          </a>
+          <a class="pillar reveal reveal-delay-3" href="ag-commercial.html">
+            <div class="pillar-image">
+              <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Agricultural field under open sky" width="800" height="520" loading="lazy">
+            </div>
+            <div class="pillar-copy">
+              <h3>Ag &amp; commercial</h3>
+              <p>Personal and business financing together, with Jeremy Kresky for agricultural and commercial files.</p>
+              <span class="pillar-link">Explore the joint consult</span>
+            </div>
+          </a>
         </div>
       </div>
     </section>
-  </div>
 
-  <main id="main">
-    <section id="story">
-      <div class="wrap story-layout">
-        <img src="images/mark-story.png" alt="Mark Heeney with a woman outdoors" width="1024" height="1024">
+    <section class="section process">
+      <div class="wrap process-grid">
         <div>
-          <h2>Death Before Decaf</h2>
-          <h3 class="story-kicker">My story</h3>
-          <p class="section-intro">With 10+ years in financial services, Mark brings a background in banking, financial advising, and financing to every client relationship. You work with him directly. He answers his own calls, messages, and emails.</p>
-          <p>Mark’s goal is to make the process clear and less stressful, and to leave every client confident in the decision they are making.</p>
+          <p class="eyebrow">How it works</p>
+          <h2 class="section-title">One relationship. The right lender for the file.</h2>
+          <p class="section-lead">As a Mortgage Agent Level 2 with MPFG, Mark shops suitable lenders rather than locking you into a single bank product — and you work with him directly.</p>
+        </div>
+        <ol class="steps">
+          <li class="reveal">
+            <span class="step-n">01</span>
+            <div>
+              <h3>Consultation</h3>
+              <p>Share your goals, timeline, and what the mortgage needs to do. We clarify what lenders will ask for.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="step-n">02</span>
+            <div>
+              <h3>Structure</h3>
+              <p>We review income, credit, and property details so the file is positioned clearly before it goes out.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="step-n">03</span>
+            <div>
+              <h3>Lender match</h3>
+              <p>Through MPFG, your file is shopped to lenders suited to the purchase, refinance, or equity plan.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="step-n">04</span>
+            <div>
+              <h3>Close</h3>
+              <p>Support through conditions, commitment, and funding so you know what happens next.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section why" id="story">
+      <div class="wrap why-grid">
+        <figure class="why-photo reveal">
+          <img src="images/mark-story.png" alt="Mark Heeney with a woman outdoors" width="1024" height="1024" loading="lazy">
+        </figure>
+        <div>
+          <p class="eyebrow">Death Before Decaf · My story</p>
+          <h2 class="section-title">Banking experience on your side of the table</h2>
+          <p class="section-lead">With 10+ years in financial services, Mark brings a background in banking, financial advising, and financing to every client relationship. You work with him directly. He answers his own calls, messages, and emails.</p>
+          <p class="section-lead">His goal is to make the process clear and less stressful, and to leave every client confident in the decision they are making.</p>
+          <ul class="licence-list">
+            <li><strong>Mark Heeney</strong> — Mortgage Agent Level 2</li>
+            <li>Individual FSRA licence #M25001772</li>
+            <li>Mortgage Powered Financial Group Inc. · Brokerage FSRA #13720</li>
+          </ul>
+          <div class="cta-row">
+            <a class="btn btn-navy" href="#contact">Contact Mark</a>
+            <a class="btn btn-gold" href="tel:+12267599899">Call 226-759-9899</a>
+          </div>
         </div>
       </div>
       <div class="wrap">
@@ -91,31 +198,11 @@
       </div>
     </section>
 
-    <section id="services">
-      <div class="wrap service-layout">
-        <img src="images/mark-lifting.png" alt="Mark Heeney lifting" width="1200" height="1200">
-        <div>
-          <h2>We do the heavy lifting for you</h2>
-          <p class="section-intro">A purchase, a refinance, or equity for a specific plan. The conversation starts with what the mortgage needs to do.</p>
-          <ol>
-            <li>Buying a first home</li>
-            <li>Purchasing the next property</li>
-            <li>Refinancing to consolidate debt</li>
-            <li>Accessing equity for renovations or major expenses</li>
-            <li>Using home equity toward investments or other financial goals</li>
-          </ol>
-          <p class="actions">
-            <a class="btn btn-copper" href="https://book.mortgagesuite.ca/#/markheeney">Talk it through</a>
-            <a class="btn btn-ghost" href="https://apply.mortgageboss.ca/MI/mark-heeney">Start your application</a>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="clients">
+    <section class="section" id="clients">
       <div class="wrap">
-        <h2>What clients say</h2>
-        <p class="section-intro">From clients of Mortgage Powered Financial Group who worked with Mark.</p>
+        <p class="eyebrow">Social proof</p>
+        <h2 class="section-title">What clients say</h2>
+        <p class="section-lead">From clients of Mortgage Powered Financial Group who worked with Mark.</p>
         <div class="quotes">
           <figure>
             <blockquote cite="https://mpfg.ca/our-team/mark-heeney/">
@@ -133,56 +220,71 @@
       </div>
     </section>
 
-    <section id="contact">
-      <div class="wrap contact-grid">
-        <div class="card">
-          <h2>Contact Mark</h2>
-          <p>He answers his own phone and email.</p>
-          <p><a class="btn btn-copper" href="tel:+12267599899">Call 226-759-9899</a></p>
-          <p><a href="mailto:mheeney@mortgagesuite.ca">mheeney@mortgagesuite.ca</a></p>
-          <p><a href="https://apply.mortgageboss.ca/MI/mark-heeney">Start an application</a></p>
+    <section class="cta-band section" id="contact">
+      <div class="wrap cta-inner reveal">
+        <div>
+          <h2>Ready to talk through your financing options?</h2>
+          <p>Book a meeting online. He answers his own phone and email — no obligation, clear next steps.</p>
+          <p class="cta-compliance">Mark Heeney, Mortgage Agent Level 2 · Mortgage Powered Financial Group Inc. (FSRA #13720)</p>
         </div>
-        <div class="card">
-          <h3>Office</h3>
-          <address>
-            <strong>Windsor · Home of Mortgage Suite</strong>
-            <p>4510 Rhodes Drive, Unit 410<br>Windsor, ON N8W 5K5</p>
-          </address>
+        <div class="cta-row">
+          <a class="btn btn-gold" href="https://book.mortgagesuite.ca/#/markheeney" rel="noopener noreferrer" target="_blank">Book a Meeting</a>
+          <a class="btn btn-outline" href="https://apply.mortgageboss.ca/MI/mark-heeney" rel="noopener noreferrer" target="_blank">Apply Online</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="wrap footer-grid">
       <div>
-        <p class="footer-name">Mark Heeney</p>
-        <p>Mortgage Agent Level 2 · FSRA #M25001772</p>
-        <p>Sponsored by Mortgage Powered Financial Group Inc.<br>FSRA Brokerage Licence #13720</p>
+        <p class="footer-brand">Mark Heeney</p>
+        <p class="footer-title">Mortgage Agent Level 2 · FSRA #M25001772</p>
+        <p class="footer-brokerage">Sponsored by <strong>Mortgage Powered Financial Group Inc.</strong><br>FSRA Brokerage Licence #13720</p>
         <img class="compliance-logo" src="images/mpfg-horizontal-fsra.svg" alt="Mortgage Powered Financial Group, FSRA 13720" width="320" height="111">
-        <p class="footer-disclaimer">Mortgage products are arranged through Mortgage Powered Financial Group Inc. Rates, terms, and approval are subject to lender criteria and borrower qualification.</p>
+        <p class="footer-note">Mortgage products are arranged through Mortgage Powered Financial Group Inc. Rates, terms, and approval are subject to lender criteria and borrower qualification.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/mortgage.with.mark/" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.facebook.com/VII.XL.VII" aria-label="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M14.5 8.5V6.8c0-.8.5-1 1.1-1H17V3h-2.2C12.2 3 11 4.4 11 6.6v1.9H9v2.8h2V21h3.5v-9.7h2.3l.4-2.8h-2.7z"/></svg></a>
+          <a href="https://www.linkedin.com/in/mark-heeney-460601441/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M4.7 3.3a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6zM3.2 8.3h3v12.4h-3zM9.1 8.3h2.9v1.7h.1c.4-.8 1.4-1.7 3-1.7 3.2 0 3.8 2.1 3.8 4.8v7.6h-3V14c0-1.6 0-3.6-2.2-3.6s-2.5 1.7-2.5 3.5v6.8H9.1z"/></svg></a>
+        </div>
       </div>
-      <nav aria-label="Explore">
-        <p class="footer-label">Explore</p>
+      <div>
+        <p class="footer-heading">Explore</p>
         <ul>
           <li><a href="#story">My Story</a></li>
           <li><a href="#services">Services</a></li>
+          <li><a href="ag-commercial.html">Ag &amp; Commercial</a></li>
           <li><a href="blog/index.html">Blog</a></li>
           <li><a href="https://book.mortgagesuite.ca/#/markheeney">Book now</a></li>
         </ul>
-      </nav>
+      </div>
       <div>
-        <p class="footer-label">Contact</p>
-        <p><a href="tel:+12267599899">226-759-9899</a></p>
-        <p><a href="mailto:mheeney@mortgagesuite.ca">mheeney@mortgagesuite.ca</a></p>
-        <address>4510 Rhodes Drive, Unit 410<br>Windsor, ON N8W 5K5</address>
-        <p><a href="https://mpfg.ca/">MPFG website</a></p>
-        <p><a href="https://www.fsrao.ca/consumers/mortgage-brokering">FSRA consumer resources</a></p>
+        <p class="footer-heading">Contact</p>
+        <ul>
+          <li><a href="tel:+12267599899">226-759-9899</a></li>
+          <li><a href="mailto:mheeney@mortgagesuite.ca">mheeney@mortgagesuite.ca</a></li>
+          <li><address>4510 Rhodes Drive, Unit 410<br>Windsor, ON N8W 5K5</address></li>
+          <li><a href="https://mpfg.ca/" rel="noopener noreferrer" target="_blank">MPFG website</a></li>
+          <li><a href="https://www.fsrao.ca/consumers/mortgage-brokering" rel="noopener noreferrer" target="_blank">FSRA consumer resources</a></li>
+        </ul>
       </div>
     </div>
-    <div class="wrap footer-base">
+    <div class="wrap footer-bottom">
       <p>© 2026 Mark Heeney. Advertising complies with FSRA mortgage industry public relations and advertising requirements. Materials subject to brokerage review.</p>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector("[data-nav-toggle]");
+      var nav = document.querySelector("[data-primary-nav]");
+      if (!toggle || !nav) return;
+      toggle.addEventListener("click", function () {
+        var open = nav.classList.toggle("is-open");
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+    })();
+  </script>
 </body>
 </html>
