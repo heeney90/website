@@ -186,10 +186,11 @@ h2 {
   margin-top: 0;
   font-size: 1.12rem;
 }
-.personal {
+.story-kicker {
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 1.45rem;
-  margin-bottom: 0;
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin: -0.15rem 0 0.75rem;
 }
 
 .story-layout,
