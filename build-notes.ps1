@@ -418,9 +418,34 @@ function ShellHtml($title, $desc, $mainHtml, $inBlog) {
     $mainHtml
   </main>
   <footer>
-    <div class="wrap">
-      <img class="compliance-logo" src="$logo" alt="Mortgage Powered Financial Group, FSRA 13720" width="320" height="111">
-      <p>Mark Heeney, Mortgage Agent Level 2, license M25001772. Mortgage Powered Financial Group, FSRA #13720. These notes are general information, not tax, investment, or legal advice, and not a commitment to lend or a rate quote. Putting debt on a mortgage can secure it against your home and can increase the interest you pay if the balance is spread over a longer time.</p>
+    <div class="wrap footer-grid">
+      <div>
+        <p class="footer-name">Mark Heeney</p>
+        <p>Mortgage Agent Level 2 · FSRA #M25001772</p>
+        <p>Sponsored by Mortgage Powered Financial Group Inc.<br>FSRA Brokerage Licence #13720</p>
+        <img class="compliance-logo" src="$logo" alt="Mortgage Powered Financial Group, FSRA 13720" width="320" height="111">
+        <p class="footer-disclaimer">Mortgage products are arranged through Mortgage Powered Financial Group Inc. Rates, terms, and approval are subject to lender criteria and borrower qualification.</p>
+      </div>
+      <nav aria-label="Explore">
+        <p class="footer-label">Explore</p>
+        <ul>
+          <li><a href="${homeHref}#story">My Story</a></li>
+          <li><a href="${homeHref}#services">Services</a></li>
+          <li><a href="$notes">Blog</a></li>
+          <li><a href="https://book.mortgagesuite.ca/#/markheeney">Book now</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="footer-label">Contact</p>
+        <p><a href="tel:+12267599899">226-759-9899</a></p>
+        <p><a href="mailto:mheeney@mortgagesuite.ca">mheeney@mortgagesuite.ca</a></p>
+        <address>4510 Rhodes Drive, Unit 410<br>Windsor, ON N8W 5K5</address>
+        <p><a href="https://mpfg.ca/">MPFG website</a></p>
+        <p><a href="https://www.fsrao.ca/consumers/mortgage-brokering">FSRA consumer resources</a></p>
+      </div>
+    </div>
+    <div class="wrap footer-base">
+      <p>© 2026 Mark Heeney. Advertising complies with FSRA mortgage industry public relations and advertising requirements. Materials subject to brokerage review.</p>
     </div>
   </footer>
 </body>
