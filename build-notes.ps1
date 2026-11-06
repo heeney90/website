@@ -379,6 +379,7 @@ function ShellHtml($title, $desc, $mainHtml, $inBlog) {
   $homeHref = if ($inBlog) { '../index.html' } else { 'index.html' }
   $notes = if ($inBlog) { 'index.html' } else { 'blog/index.html' }
   $css = if ($inBlog) { '../styles.css' } else { 'styles.css' }
+  $logo = if ($inBlog) { '../images/mpfg-horizontal-fsra.svg' } else { 'images/mpfg-horizontal-fsra.svg' }
   $safeTitle = HtmlEncode $title
   $safeDesc = HtmlEncode $desc
 @"
@@ -418,6 +419,7 @@ function ShellHtml($title, $desc, $mainHtml, $inBlog) {
   </main>
   <footer>
     <div class="wrap">
+      <img class="compliance-logo" src="$logo" alt="Mortgage Powered Financial Group, FSRA 13720" width="320" height="111">
       <p>Mark Heeney, Mortgage Agent Level 2, license M25001772. Mortgage Powered Financial Group, FSRA #13720. These notes are general information, not tax, investment, or legal advice, and not a commitment to lend or a rate quote. Putting debt on a mortgage can secure it against your home and can increase the interest you pay if the balance is spread over a longer time.</p>
     </div>
   </footer>
