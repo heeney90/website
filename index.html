@@ -71,22 +71,80 @@
         <p class="eyebrow">Focus areas</p>
         <h2 class="section-title">Financing built around what the mortgage needs to do</h2>
         <p class="section-lead">A purchase, a refinance, or equity for a specific plan. The conversation starts with your goals — not a single bank product.</p>
+        <!-- 3D models: CC0 from Grab3D (colonial house, piggy bank, farmhouse) -->
         <div class="pillar-list">
-          <a class="pillar pillar-text reveal reveal-delay-1" href="https://book.mortgagesuite.ca/#/markheeney">
+          <a class="pillar pillar-modelled reveal reveal-delay-1" href="https://book.mortgagesuite.ca/#/markheeney">
+            <div class="pillar-model" aria-hidden="true">
+              <model-viewer
+                class="scroll-model"
+                src="models/house.glb"
+                alt=""
+                camera-orbit="35deg 72deg 105%"
+                field-of-view="28deg"
+                interaction-prompt="none"
+                shadow-intensity="0.85"
+                exposure="1.05"
+                environment-image="neutral"
+                disable-zoom
+                disable-pan
+                disable-tap
+                loading="lazy"
+                data-orbit-start="20"
+                data-orbit-end="320"
+              ></model-viewer>
+            </div>
             <div class="pillar-copy">
               <h3>Home purchases</h3>
               <p>First homes and next properties — with a clear read on payments, qualification, and what lenders will need.</p>
               <span class="pillar-link">Talk it through</span>
             </div>
           </a>
-          <a class="pillar pillar-text reveal reveal-delay-2" href="https://book.mortgagesuite.ca/#/markheeney">
+          <a class="pillar pillar-modelled reveal reveal-delay-2" href="https://book.mortgagesuite.ca/#/markheeney">
+            <div class="pillar-model" aria-hidden="true">
+              <model-viewer
+                class="scroll-model"
+                src="models/piggy-bank.glb"
+                alt=""
+                camera-orbit="40deg 70deg 105%"
+                field-of-view="26deg"
+                interaction-prompt="none"
+                shadow-intensity="0.85"
+                exposure="1.1"
+                environment-image="neutral"
+                disable-zoom
+                disable-pan
+                disable-tap
+                loading="lazy"
+                data-orbit-start="350"
+                data-orbit-end="80"
+              ></model-viewer>
+            </div>
             <div class="pillar-copy">
               <h3>Refinance &amp; equity</h3>
               <p>Consolidate debt, renovate, or put equity toward a plan — without losing sight of the bigger monthly picture.</p>
               <span class="pillar-link">Talk it through</span>
             </div>
           </a>
-          <a class="pillar pillar-text reveal reveal-delay-3" href="ag-commercial.html">
+          <a class="pillar pillar-modelled reveal reveal-delay-3" href="ag-commercial.html">
+            <div class="pillar-model" aria-hidden="true">
+              <model-viewer
+                class="scroll-model"
+                src="models/farmhouse.glb"
+                alt=""
+                camera-orbit="30deg 68deg 110%"
+                field-of-view="30deg"
+                interaction-prompt="none"
+                shadow-intensity="0.85"
+                exposure="1.05"
+                environment-image="neutral"
+                disable-zoom
+                disable-pan
+                disable-tap
+                loading="lazy"
+                data-orbit-start="10"
+                data-orbit-end="300"
+              ></model-viewer>
+            </div>
             <div class="pillar-copy">
               <h3>Ag &amp; commercial</h3>
               <p>Personal and business financing together, with Jeremy Kresky for agricultural and commercial files.</p>
@@ -280,15 +338,65 @@
     </div>
   </footer>
 
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   <script>
     (function () {
       var toggle = document.querySelector("[data-nav-toggle]");
       var nav = document.querySelector("[data-primary-nav]");
-      if (!toggle || !nav) return;
-      toggle.addEventListener("click", function () {
-        var open = nav.classList.toggle("is-open");
-        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      if (toggle && nav) {
+        toggle.addEventListener("click", function () {
+          var open = nav.classList.toggle("is-open");
+          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+      }
+
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+      var models = Array.prototype.slice.call(document.querySelectorAll("model-viewer.scroll-model"));
+      if (!models.length) return;
+
+      var ticking = false;
+
+      function clamp(n, min, max) {
+        return Math.min(max, Math.max(min, n));
+      }
+
+      function progressFor(el) {
+        var rect = el.getBoundingClientRect();
+        var view = window.innerHeight || 1;
+        // 0 when the model enters the lower viewport, 1 as it leaves the top
+        var start = view * 0.9;
+        var end = view * 0.15;
+        return clamp((start - rect.top) / (start - end + rect.height * 0.35), 0, 1);
+      }
+
+      function render() {
+        ticking = false;
+        models.forEach(function (viewer) {
+          var start = parseFloat(viewer.getAttribute("data-orbit-start") || "30");
+          var end = parseFloat(viewer.getAttribute("data-orbit-end") || "300");
+          var t = reduce.matches ? 0.35 : progressFor(viewer);
+          var azimuth = start + (end - start) * t;
+          var elevation = 68 + Math.sin(t * Math.PI) * 8;
+          var radius = 108 - t * 8;
+          viewer.cameraOrbit = azimuth.toFixed(1) + "deg " + elevation.toFixed(1) + "deg " + radius.toFixed(1) + "%";
+          if (typeof viewer.jumpCameraToGoal === "function") viewer.jumpCameraToGoal();
+        });
+      }
+
+      function onScroll() {
+        if (!ticking) {
+          ticking = true;
+          window.requestAnimationFrame(render);
+        }
+      }
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", onScroll);
+      reduce.addEventListener("change", onScroll);
+      models.forEach(function (viewer) {
+        viewer.addEventListener("load", onScroll);
       });
+      render();
     })();
   </script>
 </body>
