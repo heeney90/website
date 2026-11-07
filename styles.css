@@ -569,16 +569,21 @@ p { margin: 0 0 1em; }
   margin: 0;
 }
 .quotes blockquote p {
-  margin: 0;
+  margin: 0 0 0.85rem;
   color: var(--ink);
-  font-size: 1.02rem;
+  font-size: 0.98rem;
 }
+.quotes blockquote p:last-child { margin-bottom: 0; }
 .quotes figcaption {
   font-family: var(--font-display);
   margin-top: 1rem;
   color: var(--mpfg-blue-deep);
   font-weight: 700;
   font-size: 0.9rem;
+}
+.quotes figcaption span {
+  color: var(--ink-muted);
+  font-weight: 600;
 }
 
 /* CTA band */
