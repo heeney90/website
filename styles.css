@@ -446,6 +446,10 @@ p { margin: 0 0 1em; }
   --poster-color: transparent;
   pointer-events: none;
 }
+/* Nudge bungalow siding toward true brick red in-engine */
+.pillar-model model-viewer[src*="house-bungalow"] {
+  filter: hue-rotate(-38deg) saturate(1.35) brightness(0.9) contrast(1.05);
+}
 .pillar-copy {
   align-content: center;
   padding: clamp(1.4rem, 3vw, 2rem);
