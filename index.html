@@ -71,7 +71,7 @@
         <p class="eyebrow">Focus areas</p>
         <h2 class="section-title">Financing built around what the mortgage needs to do</h2>
         <p class="section-lead">A purchase, a refinance, or equity for a specific plan. The conversation starts with your goals — not a single bank product.</p>
-        <!-- 3D models: CC0 from Grab3D (colonial house, piggy bank, farmhouse) -->
+        <!-- 3D models: CC0 from Grab3D (dutch canal brick house, piggy bank, farmhouse) -->
         <div class="pillar-list">
           <a class="pillar pillar-modelled reveal reveal-delay-1" href="https://book.mortgagesuite.ca/#/markheeney">
             <div class="pillar-model" aria-hidden="true">
@@ -79,18 +79,19 @@
                 class="scroll-model"
                 src="models/house.glb"
                 alt=""
-                camera-orbit="35deg 72deg 105%"
-                field-of-view="28deg"
+                camera-orbit="40deg 75deg 145%"
+                field-of-view="32deg"
                 interaction-prompt="none"
                 shadow-intensity="0.85"
-                exposure="1.05"
+                exposure="1.0"
                 environment-image="neutral"
                 disable-zoom
                 disable-pan
                 disable-tap
                 loading="lazy"
-                data-orbit-start="20"
-                data-orbit-end="320"
+                data-orbit-start="25"
+                data-orbit-end="310"
+                data-orbit-radius="145"
               ></model-viewer>
             </div>
             <div class="pillar-copy">
@@ -377,7 +378,8 @@
           var t = reduce.matches ? 0.35 : progressFor(viewer);
           var azimuth = start + (end - start) * t;
           var elevation = 68 + Math.sin(t * Math.PI) * 8;
-          var radius = 108 - t * 8;
+          var baseRadius = parseFloat(viewer.getAttribute("data-orbit-radius") || "110");
+          var radius = baseRadius - t * 6;
           viewer.cameraOrbit = azimuth.toFixed(1) + "deg " + elevation.toFixed(1) + "deg " + radius.toFixed(1) + "%";
           if (typeof viewer.jumpCameraToGoal === "function") viewer.jumpCameraToGoal();
         });
