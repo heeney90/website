@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://markheeney.ca/sitemap.xml
