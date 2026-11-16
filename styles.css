@@ -646,7 +646,7 @@ p { margin: 0 0 1em; }
 }
 .page-hero h1 {
   font-size: clamp(2.2rem, 5vw, 3.4rem);
-  max-width: 16ch;
+  max-width: 22ch;
   color: var(--mpfg-blue-deep);
 }
 .page-lede {
@@ -840,7 +840,66 @@ p { margin: 0 0 1em; }
   color: #ffffffe6;
 }
 
+
+/* Local SEO service pages */
+.seo-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(14rem, 0.7fr);
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: start;
+}
+.seo-copy h2:first-child { margin-top: 0; }
+.related-services {
+  position: sticky;
+  top: 6.5rem;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid var(--line);
+}
+.related-list {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.65rem;
+}
+.related-list a {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--mpfg-blue-deep);
+}
+.related-list a:hover { color: var(--mpfg-blue); text-decoration: underline; }
+.faq-list {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+  max-width: 44rem;
+}
+.faq-list h3 {
+  font-family: var(--font-display);
+  color: var(--mpfg-blue-deep);
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+}
+.faq-list p {
+  color: var(--ink-muted);
+  margin: 0;
+}
+.area-served {
+  margin-top: 2rem;
+  max-width: 44rem;
+}
+.area-served ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.2rem;
+  columns: 2;
+  gap: 1.5rem;
+}
+.area-served li { margin-bottom: 0.35rem; color: var(--ink-muted); }
 @media (width <= 800px) {
+  .seo-grid { grid-template-columns: 1fr; }
+  .related-services { position: static; }
+  .area-served ul { columns: 1; }
   .pillar,
   .process-grid,
   .why-grid,
